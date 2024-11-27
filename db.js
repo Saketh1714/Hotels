@@ -1,5 +1,7 @@
 const mongoose=require('mongoose');
-const mongooseUrl='mongodb://localhost:27017/sakirestaurnant';
+require('dotenv').config();
+// const mongooseUrl='mongodb://localhost:27017/sakirestaurnant';  ///-->this is local database server
+const mongooseUrl=process.env.DB_URL;  ///-->cloud based server using env
 mongoose.connect(mongooseUrl,{
     // useNewUrlparser:true,
     // useUnifiedTopology:true

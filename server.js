@@ -10,6 +10,8 @@
 const express = require('express');
 const app = express()
 const db=require('./db');
+require('dotenv').config();
+const PORT=process.env.PORT || 3000;
 
 
 const bodyParser=require('body-parser');
@@ -27,10 +29,11 @@ app.use('/person',personroutes);
 const menuroutes=require('./routes/menuRoutes');
 app.use('/menu',menuroutes);
 
-app.listen(3000, () => {
+
+app.listen(PORT, () => {
     console.log('Server is running on http://localhost:3000');
   });
-  
+   
   
 
 
