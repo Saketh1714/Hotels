@@ -31,5 +31,5 @@ router.get('/',async(req,res)=>{
         res.status(500).json({err:'Internal server error'});
     }
 });
-
+//comment addes for testing purpose
 module.exports=router;
